@@ -17,13 +17,13 @@ WIN_COMBINATIONS = [
 
 def won?(board)
   types = ["X", "O"]
+
   types.each do |type|
     WIN_COMBINATIONS.each do |win_comb|
       if board[win_comb[0]] == type && board[win_comb[1]] == type && board[win_comb[2]] == type
         return win_comb
-      else
-        return false
       end
     end
+    return false
   end
 end

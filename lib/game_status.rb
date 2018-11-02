@@ -56,3 +56,10 @@ def over?(board)
     return false
   end
 end
+
+def winner(board)
+  if won?(board) != false
+    winComb = won?(board)
+    return board[winComb[0]]
+
+  end
